@@ -1,0 +1,406 @@
+ANEW --STANDARD--                             \  Wil Baden  2003-02-22
+
+\  *******************************************************************
+\  *                                                                 *
+\  *                    ONLY STANDARD DEFINITIONS                    *
+\  *                                                                 *
+\  *******************************************************************
+
+VOCABULARY STANDARD
+
+ONLY FORTH ALSO STANDARD DEFINITIONS ALSO FORTH
+
+\ Standard-Clone
+
+: ! ! ; 
+: # # ; 
+: #> #> ; 
+: #S #S ; 
+: ' ' ; 
+: ( postpone ( ; IMMEDIATE 
+\ (LOCAL)
+: * * ; 
+: */ */ ; 
+: */MOD */MOD ; 
+: + + ; 
+: +! +! ; 
+: +LOOP postpone +LOOP ; IMMEDIATE 
+: , , ; 
+: - - ; 
+: -TRAILING -TRAILING ; 
+: . . ; 
+: ." postpone ." ; IMMEDIATE 
+: .( postpone .( ; IMMEDIATE 
+: .R .R ; 
+: .S .S ; 
+: / / ; 
+: /MOD /MOD ; 
+: /STRING /STRING ; 
+: 0< 0< ; 
+: 0<> 0<> ; 
+: 0= 0= ; 
+: 0> 0> ; 
+: 1+ 1+ ; 
+: 1- 1- ; 
+: 2! 2! ; 
+: 2* 2* ; 
+: 2/ 2/ ; 
+: 2>R 2>R ; 
+: 2@ 2@ ; 
+: 2CONSTANT 2CONSTANT ; 
+: 2DROP 2DROP ; 
+: 2dup 2dup ; 
+: 2LITERAL postpone 2LITERAL ; IMMEDIATE 
+: 2over 2over ; 
+: 2R> 2R> ; 
+: 2R@ 2R@ ; 
+: 2ROT 2ROT ; 
+: 2SWAP 2SWAP ; 
+: 2VARIABLE 2VARIABLE ; 
+: : : ; 
+: :NONAME :NONAME ; 
+: ; postpone ; ; IMMEDIATE 
+: ;CODE postpone ;CODE ; IMMEDIATE 
+: < < ; 
+: <# <# ; 
+: <> <> ; 
+: = = ; 
+: > > ; 
+: >BODY >BODY ; 
+: >FLOAT >FLOAT ; 
+: >IN >IN ; 
+: >NUMBER >NUMBER ; 
+: >R >R ; 
+: ? postpone ? ; IMMEDIATE 
+: ?DO postpone ?DO ; IMMEDIATE 
+: ?dup ?dup ; 
+: @ @ ; 
+: ABORT ABORT ; 
+: ABORT" postpone ABORT" ; IMMEDIATE 
+: ABS ABS ; 
+: ACCEPT ACCEPT ; 
+: AGAIN postpone AGAIN ; IMMEDIATE 
+\ AHEAD
+: align align ; 
+: aligned aligned ; 
+: ALLOCATE ALLOCATE ; 
+: ALLOT ALLOT ; 
+: ALSO ALSO ; 
+: AND AND ; 
+: ASSEMBLER ASSEMBLER ; 
+: AT-XY AT-XY ; 
+: BASE BASE ; 
+: BEGIN postpone BEGIN ; IMMEDIATE 
+: BIN BIN ; 
+: BL BL ; 
+: BLANK BLANK ; 
+: BLK BLK ; 
+: BLOCK BLOCK ; 
+\ BUFFER
+: BYE BYE ; 
+: C! C! ; 
+: C" postpone C" ; IMMEDIATE 
+: C, C, ; 
+: C@ C@ ; 
+: CASE postpone CASE ; IMMEDIATE 
+: CATCH CATCH ; 
+: CELL+ CELL+ ; 
+: CELLS postpone CELLS ; IMMEDIATE 
+: CHAR CHAR ; 
+: CHAR+ CHAR+ ; 
+: chars chars ; 
+: CLOSE-FILE CLOSE-FILE ; 
+: CMOVE CMOVE ; 
+: CMOVE> CMOVE> ; 
+: CODE CODE ; 
+: COMPARE COMPARE ; 
+: COMPILE, COMPILE, ; 
+: CONSTANT CONSTANT ; 
+: COUNT COUNT ; 
+: CR CR ; 
+: CREATE CREATE ; 
+: CREATE-FILE CREATE-FILE ; 
+: CS-PICK CS-PICK ; 
+: CS-ROLL CS-ROLL ; 
+: D+ D+ ; 
+: D- D- ; 
+: D. D. ; 
+: D.R D.R ; 
+: D0< D0< ; 
+: D0= D0= ; 
+: D2* D2* ; 
+: D2/ D2/ ; 
+: D< D< ; 
+: D= D= ; 
+: D>F D>F ; 
+: D>S D>S ; 
+: DABS DABS ; 
+: DECIMAL DECIMAL ; 
+: DEFINITIONS DEFINITIONS ; 
+: DELETE-FILE DELETE-FILE ; 
+: DEPTH DEPTH ; 
+: DF! DF! ; 
+: DF@ DF@ ; 
+: DFALIGN DFALIGN ; 
+: DFALIGNED DFALIGNED ; 
+: DFLOAT+ DFLOAT+ ; 
+: DFLOATS DFLOATS ; 
+: DMAX DMAX ; 
+: DMIN DMIN ; 
+: DNEGATE DNEGATE ; 
+: DO postpone DO ; IMMEDIATE 
+: DOES> postpone DOES> ; IMMEDIATE 
+: DROP DROP ; 
+: DU< DU< ; 
+: DUMP DUMP ; 
+: dup dup ; 
+: EDITOR EDITOR ; 
+: EKEY EKEY ; 
+: EKEY>CHAR EKEY>CHAR ; 
+: EKEY? EKEY? ; 
+: ELSE postpone ELSE ; IMMEDIATE 
+: EMIT EMIT ; 
+: EMIT? EMIT? ; 
+\ EMPTY-BUFFERS
+: ENDCASE postpone ENDCASE ; IMMEDIATE 
+: ENDOF postpone ENDOF ; IMMEDIATE 
+: ENVIRONMENT? ENVIRONMENT? ; 
+: ERASE ERASE ; 
+: EVALUATE EVALUATE ; 
+: EXECUTE EXECUTE ; 
+: EXIT postpone EXIT ; IMMEDIATE 
+: F! F! ; 
+: F* F* ; 
+: F** F** ; 
+: F+ F+ ; 
+: F- F- ; 
+: F. F. ; 
+: F/ F/ ; 
+: F0< F0< ; 
+: F0= F0= ; 
+: F< F< ; 
+: F>D F>D ; 
+: F@ F@ ; 
+: FABS FABS ; 
+: FACOS FACOS ; 
+: FACOSH FACOSH ; 
+: FALIGN FALIGN ; 
+: FALIGNED FALIGNED ; 
+: FALOG FALOG ; 
+: FALSE FALSE ; 
+: FASIN FASIN ; 
+: FASINH FASINH ; 
+: FATAN FATAN ; 
+: FATAN2 FATAN2 ; 
+: FATANH FATANH ; 
+: FCONSTANT FCONSTANT ; 
+: FCOS FCOS ; 
+: FCOSH FCOSH ; 
+: FDEPTH FDEPTH ; 
+: FDROP FDROP ; 
+: fdup fdup ; 
+: FE. FE. ; 
+: FEXP FEXP ; 
+: FEXPM1 FEXPM1 ; 
+: FILE-POSITION FILE-POSITION ; 
+: FILE-SIZE FILE-SIZE ; 
+: FILE-STATUS FILE-STATUS ; 
+: FILL FILL ; 
+: FIND FIND ; 
+: FLITERAL postpone FLITERAL ; IMMEDIATE 
+: FLN FLN ; 
+: FLNP1 FLNP1 ; 
+: FLOAT+ FLOAT+ ; 
+: FLOATS FLOATS ; 
+: FLOG FLOG ; 
+: FLOOR FLOOR ; 
+\ FLUSH
+: FLUSH-FILE FLUSH-FILE ; 
+: FM/MOD FM/MOD ; 
+: FMAX FMAX ; 
+: FMIN FMIN ; 
+: FNEGATE FNEGATE ; 
+: FORTH STANDARD ; 
+: FORTH-WORDLIST FORTH-WORDLIST ; 
+: fover fover ; 
+: FREE FREE ; 
+: FROT FROT ; 
+: FROUND FROUND ; 
+: FS. FS. ; 
+: FSIN FSIN ; 
+: FSINCOS FSINCOS ; 
+: FSINH FSINH ; 
+: FSQRT FSQRT ; 
+: FSWAP FSWAP ; 
+: FTAN FTAN ; 
+: FTANH FTANH ; 
+: FVARIABLE FVARIABLE ; 
+: F~ F~ ; 
+: GET-CURRENT GET-CURRENT ; 
+: GET-ORDER GET-ORDER ; 
+: HERE HERE ; 
+: HEX HEX ; 
+: HOLD HOLD ; 
+: I I ; 
+: IF postpone IF ; IMMEDIATE 
+: IMMEDIATE IMMEDIATE ; 
+: INCLUDE-FILE INCLUDE-FILE ; 
+: INCLUDED INCLUDED ; 
+: INVERT INVERT ; 
+: J J ; 
+: KEY KEY ; 
+: KEY? KEY? ; 
+: LEAVE LEAVE ; 
+\ LIST
+: LITERAL postpone LITERAL ; IMMEDIATE 
+\ LOAD
+: LOCALS| postpone LOCALS| ; IMMEDIATE 
+: LOOP postpone LOOP ; IMMEDIATE 
+: LSHIFT LSHIFT ; 
+: M* M* ; 
+: M*/ M*/ ; 
+: M+ M+ ; 
+: MARKER MARKER ; 
+: MAX MAX ; 
+: MIN MIN ; 
+: MOD MOD ; 
+: MOVE MOVE ; 
+: MS MS ; 
+: NEGATE NEGATE ; 
+: NIP NIP ; 
+: OF postpone OF ; IMMEDIATE 
+: ONLY ONLY FORTH DEFINITIONS ; 
+: OPEN-FILE OPEN-FILE ; 
+: OR OR ; 
+: ORDER ORDER ; 
+: over over ; 
+: PAD PAD ; 
+: PAGE PAGE ; 
+: PARSE PARSE ; 
+: PICK PICK ; 
+: postpone postpone postpone ; IMMEDIATE 
+: PRECISION PRECISION ; 
+: PREVIOUS PREVIOUS ; 
+: QUIT QUIT ; 
+: R/O R/O ; 
+: R/W R/W ; 
+: R> R> ; 
+: R@ R@ ; 
+: READ-FILE READ-FILE ; 
+: READ-LINE READ-LINE ; 
+: RECURSE postpone RECURSE ; IMMEDIATE 
+: REFILL REFILL ; 
+: RENAME-FILE RENAME-FILE ; 
+: REPEAT postpone REPEAT ; IMMEDIATE 
+: REPOSITION-FILE REPOSITION-FILE ; 
+: REPRESENT REPRESENT ; 
+: RESIZE RESIZE ; 
+: RESIZE-FILE RESIZE-FILE ; 
+: RESTORE-INPUT RESTORE-INPUT ; 
+: ROLL ROLL ; 
+: ROT ROT ; 
+: RSHIFT RSHIFT ; 
+: S" postpone S" ; IMMEDIATE 
+: S>D S>D ; 
+\ SAVE-BUFFERS
+: SAVE-INPUT SAVE-INPUT ; 
+\ SCR
+: SEARCH SEARCH ; 
+: SEARCH-WORDLIST SEARCH-WORDLIST ; 
+: SEE SEE ; 
+: SET-CURRENT SET-CURRENT ; 
+: SET-ORDER SET-ORDER ; 
+: SET-PRECISION SET-PRECISION ; 
+: SF! SF! ; 
+: SF@ SF@ ; 
+: SFALIGN SFALIGN ; 
+: SFALIGNED SFALIGNED ; 
+: SFLOAT+ SFLOAT+ ; 
+: SFLOATS SFLOATS ; 
+: SIGN SIGN ; 
+: SLITERAL postpone SLITERAL ; IMMEDIATE 
+: SM/REM SM/REM ; 
+: SOURCE SOURCE ; 
+: SOURCE-ID SOURCE-ID ; 
+: SPACE SPACE ; 
+: SPACES SPACES ; 
+: STATE STATE ; 
+: SWAP SWAP ; 
+: THEN postpone THEN ; IMMEDIATE 
+: THROW THROW ; 
+\ THRU
+: TIME&DATE TIME&DATE ; 
+: to postpone to ; IMMEDIATE 
+: TRUE TRUE ; 
+: TUCK TUCK ; 
+: TYPE TYPE ; 
+: U. U. ; 
+: U.R U.R ; 
+: U< U< ; 
+: U> U> ; 
+: UM* UM* ; 
+: UM/MOD UM/MOD ; 
+: UNLOOP UNLOOP ; 
+: UNTIL postpone UNTIL ; IMMEDIATE 
+: UNUSED UNUSED ; 
+\ UPDATE
+: VALUE VALUE ; 
+: VARIABLE VARIABLE ; 
+: W/O W/O ; 
+: WHILE postpone WHILE ; IMMEDIATE 
+: WITHIN WITHIN ; 
+: WORD WORD ; 
+: WORDLIST WORDLIST ; 
+: WORDS WORDS ; 
+: WRITE-FILE WRITE-FILE ; 
+: WRITE-LINE WRITE-LINE ; 
+: XOR XOR ; 
+: [ postpone [ ; IMMEDIATE 
+: ['] postpone ['] ; IMMEDIATE 
+: [char] postpone [char] ; IMMEDIATE 
+: [compile] postpone [compile] ; IMMEDIATE 
+: [ELSE] postpone [ELSE] ; IMMEDIATE 
+: [IF] postpone [IF] ; IMMEDIATE 
+: [THEN] postpone [THEN] ; IMMEDIATE 
+: \ postpone \ ; IMMEDIATE 
+: ] ] ; 
+
+ONLY STANDARD DEFINITIONS ORDER  
+
+WORDS
+]   \   [THEN]   [IF]   [ELSE]   [COMPILE]   [CHAR]   [']   [   XOR   
+WRITE-LINE   WRITE-FILE   WORDS   WORDLIST   WORD   WITHIN   WHILE   W/O   
+VARIABLE   VALUE   UNUSED   UNTIL   UNLOOP   UM/MOD   UM*   U>   U<   U.R   
+U.   TYPE   TUCK   TRUE   TO   TIME&DATE   THROW   THEN   SWAP   STATE   
+SPACES   SPACE   SOURCE-ID   SOURCE   SM/REM   SLITERAL   SIGN   SFLOATS   
+SFLOAT+   SFALIGNED   SFALIGN   SF@   SF!   SET-PRECISION   SET-ORDER   
+SET-CURRENT   SEE   SEARCH-WORDLIST   SEARCH   SAVE-INPUT   S>D   S"   RSHIFT   
+ROT   ROLL   RESTORE-INPUT   RESIZE-FILE   RESIZE   REPRESENT   
+REPOSITION-FILE   REPEAT   RENAME-FILE   REFILL   RECURSE   READ-LINE   
+READ-FILE   R@   R>   R/W   R/O   QUIT   PREVIOUS   PRECISION   POSTPONE   
+PICK   PARSE   PAGE   PAD   OVER   ORDER   OR   OPEN-FILE   ONLY   OF   NIP   
+NEGATE   MS   MOVE   MOD   MIN   MAX   MARKER   M+   M*/   M*   LSHIFT   LOOP   
+LOCALS|   LITERAL   LEAVE   KEY?   KEY   J   INVERT   INCLUDED   INCLUDE-FILE   
+IMMEDIATE   IF   I   HOLD   HEX   HERE   GET-ORDER   GET-CURRENT   F~   
+FVARIABLE   FTANH   FTAN   FSWAP   FSQRT   FSINH   FSINCOS   FSIN   FS.   
+FROUND   FROT   FREE   FOVER   FORTH-WORDLIST   FORTH   FNEGATE   FMIN   FMAX   
+FM/MOD   FLUSH-FILE   FLOOR   FLOG   FLOATS   FLOAT+   FLNP1   FLN   FLITERAL   
+FIND   FILL   FILE-STATUS   FILE-SIZE   FILE-POSITION   FEXPM1   FEXP   FE.   
+FDUP   FDROP   FDEPTH   FCOSH   FCOS   FCONSTANT   FATANH   FATAN2   FATAN   
+FASINH   FASIN   FALSE   FALOG   FALIGNED   FALIGN   FACOSH   FACOS   FABS   
+F@   F>D   F<   F0=   F0<   F/   F.   F-   F+   F**   F*   F!   EXIT   
+EXECUTE   EVALUATE   ERASE   ENVIRONMENT?   ENDOF   ENDCASE   EMIT?   EMIT   
+ELSE   EKEY?   EKEY>CHAR   EKEY   EDITOR   DUP   DUMP   DU<   DROP   DOES>   
+DO   DNEGATE   DMIN   DMAX   DFLOATS   DFLOAT+   DFALIGNED   DFALIGN   DF@   
+DF!   DEPTH   DELETE-FILE   DEFINITIONS   DECIMAL   DABS   D>S   D>F   D=   
+D<   D2/   D2*   D0=   D0<   D.R   D.   D-   D+   CS-ROLL   CS-PICK   
+CREATE-FILE   CREATE   CR   COUNT   CONSTANT   COMPILE,   COMPARE   CODE   
+CMOVE>   CMOVE   CLOSE-FILE   CHARS   CHAR+   CHAR   CELLS   CELL+   CATCH   
+CASE   C@   C,   C"   C!   BYE   BLOCK   BLK   BLANK   BL   BIN   BEGIN   
+BASE   AT-XY   ASSEMBLER   AND   ALSO   ALLOT   ALLOCATE   ALIGNED   ALIGN   
+AGAIN   ACCEPT   ABS   ABORT"   ABORT   @   ?DUP   ?DO   ?   >R   >NUMBER   
+>IN   >FLOAT   >BODY   >   =   <>   <#   <   ;CODE   ;   :NONAME   :   
+2VARIABLE   2SWAP   2ROT   2R@   2R>   2OVER   2LITERAL   2DUP   2DROP   
+2CONSTANT   2@   2>R   2/   2*   2!   1-   1+   0>   0=   0<>   0<   /STRING   
+/MOD   /   .S   .R   .(   ."   .   -TRAILING   -   ,   +LOOP   +!   +   */MOD   
+*/   *   (   '   #S   #>   #   !   
